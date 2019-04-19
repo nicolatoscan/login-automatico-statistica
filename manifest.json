@@ -1,0 +1,13 @@
+{
+    "name": "Save Password",
+    "version": "1.0",
+    "description": "Prova di save password",
+    "manifest_version": 2,
+    "permissions": ["tabs", "http://datascience.maths.unitn.it/ocpu/library/doexercises/www/"],
+    "content_scripts": [
+      {
+        "matches": ["http://datascience.maths.unitn.it/ocpu/library/doexercises/www/"],
+        "js": ["login.js"]
+      }
+    ]
+  }
