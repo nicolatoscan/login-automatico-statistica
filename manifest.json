@@ -1,13 +1,20 @@
 {
-    "name": "Login Automatico Statistica",
-    "version": "1.1",
-    "description": "Login Automatico Statistica.",
-    "manifest_version": 2,
-    "permissions": ["tabs", "http://datascience.maths.unitn.it/ocpu/library/doexercises/www/"],
-    "content_scripts": [
-      {
-        "matches": ["http://datascience.maths.unitn.it/ocpu/library/doexercises/www/"],
-        "js": ["login.js"]
-      }
-    ]
-  }
+  "name": "Login Automatico Statistica",
+  "version": "1.1",
+  "description": "Login Automatico Statistica.",
+  "manifest_version": 2,
+  "permissions": [
+    "tabs",
+    "http://datascience.maths.unitn.it/ocpu/library/doexercises/www/"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://datascience.maths.unitn.it/ocpu/library/doexercises/www/"
+      ],
+      "js": [
+        "login.js"
+      ]
+    }
+  ]
+}
