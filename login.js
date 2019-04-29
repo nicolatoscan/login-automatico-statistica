@@ -7,19 +7,20 @@ window.onload = function () {
 
 setInterval(async function () {
 
-    let daRichiedere = false;
-    let today = new Date().toISOString().split("T")[0]
-    
-    if (localStorage.getItem("lastToken") !=  today) {
-        daRichiedere = true
-    }
+    let el = document.getElementById('date')
+    if (el != null) {
 
-    if (daRichiedere) {
-        let el = document.getElementById('date')
-        if (el != null) {
+        let daRichiedere = false;
+        let today = new Date().toISOString().split("T")[0]
+
+        if (localStorage.getItem("lastToken") != today) {
+            daRichiedere = true
+        }
+
+        if (daRichiedere) {
             el.value = today
             document.getElementById('tokenrequest').click()
             localStorage.setItem("lastToken", today)
         }
     }
-}, 200);
+}, 100);
